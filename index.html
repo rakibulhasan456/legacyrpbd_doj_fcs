@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>LegacyRPBD | FCS Generator</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/copy_restriction.css">
+    <link rel="stylesheet" href="assets/css/design.css">
+<link rel="icon" type="image/webp" href="assets/img/logo_png.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body><!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200">
+<title>Financial Capability Statement</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="app center">
+<div class="card">
+
+<div class="card-header">
+  <div class="brand">FINANCIAL CAPABILITY STATEMENT</div>
+  <div class="logged-as" id="loggedAs">Not logged in</div>
+</div>
+
+<div class="card-body">
+
+<!-- LEFT PANEL -->
+<div class="panel">
+
+<div id="loginPanel">
+<h3>Attorney Login</h3>
+<label>Username</label>
+<input id="username">
+<label>Password</label>
+<input id="password" type="password">
+<button id="loginBtn">Login</button>
+</div>
+
+<div id="formPanel" class="hidden">
+
+<h3>Applicant Information</h3>
+
+<label>Full Name</label>
+<input id="appName">
+
+<label>CID</label>
+<input id="appCid">
+
+<label>Date of Birth</label>
+<input id="appDob" type="date">
+
+<label>Residential Address</label>
+<textarea id="appAddress"></textarea>
+
+<label>Phone Number</label>
+<input id="appPhone">
+
+<label>Email</label>
+<input id="appEmail">
+
+<label>Application Purpose</label>
+<textarea id="appPurpose"></textarea>
+
+<h3>Available Liquid Funds</h3>
+
+<label>Bank Balance</label>
+<input id="bankBal" type="number">
+
+<label>Savings Balance</label>
+<input id="savingBal" type="number">
+
+<label>Cash on Hand</label>
+<input id="cashBal" type="number">
+
+<label>Other Liquid Assets</label>
+<input id="otherAssets" type="number">
+    
+    <h3>Proof of Income</h3>
+
+<label>Primary Income Source &amp; Monthly Amount</label>
+<input id="primaryIncome">
+
+<label>Secondary Income Source &amp; Monthly Amount</label>
+<input id="secondaryIncome">
+
+<label>Other Income</label>
+<input id="otherIncome">
+
+<label>Total Monthly Income</label>
+<input id="totalIncome" type="number">
+    
+    <h3>Existing Liabilities</h3>
+
+<label>Loan / Debt</label>
+<input id="liabilities" type="number">
+
+<label>Other Liabilities</label>
+<input id="otherLiabilities" type="number">
+    
+    <h3>Investment Capacity</h3>
+
+<label>Initial Investment Capability</label>
+<input id="initialInvestment" type="number">
+
+<label>Estimated Monthly Operating Budget</label>
+<input id="monthlyBudget" type="number">
+
+<label>Expected Funding Sources</label>
+<textarea id="fundingSource"></textarea>
+    
+    <h3>Financial Background</h3>
+
+<label>Previous Business Experience</label>
+<textarea id="businessExp"></textarea>
+
+<label>Financial Conduct (Past fraud, etc.)</label>
+<textarea id="financialConduct"></textarea>
+    
+    <h3>Attorney Verification</h3>
+
+<label>Attorney Verification Date</label>
+<input id="attorneyDate" type="date">
+    
+    <h3>Applicant Declaration</h3>
+    
+    <label>Applicant Signature</label>
+<input id="appSignature" type="file" accept="image/*">
+
+<label>Applicant Declaration Date</label>
+<input id="appDate" type="date">
+
+<div style="margin-top:12px;display:flex;gap:8px">
+<button id="updatePreview">Update Preview</button>
+<button id="downloadPNG" class="ghost">Download PNG</button>
+<button id="logoutBtn" class="ghost">Logout</button>
+</div>
+
+</div>
+</div>
+
+<!-- RIGHT PANEL -->
+<div class="panel">
+<h3>Preview</h3>
+
+<div class="statement-preview" id="statementContainer">
+    
+    <!-- Logo -->
+    <img src="assets/img/doj_watermark.webp" class="doj-logo" alt="Logo">
+
+
+    <!-- Watermark -->
+  <img id="watermark" src="assets/img/doj_watermark.webp" alt="watermark">
+    
+<div class="statement-body">
+
+<div class="center-block">
+<div class="doc-title">Financial Capability Statement</div>
+State of San Andreas – City of Los Santos<br>
+Submitted to: Office of the Mayor<br>
+Prepared by: <b id="pvAttorney"></b>
+</div>
+
+<div class="section">
+<b>Applicant Information (Client Details)</b>
+
+<div class="grid-2 mt">
+  <div>
+    Full Name: <span id="pvName"></span><br>
+    CID: <span id="pvCid"></span><br>
+    Date of Birth: <span id="pvDob"></span>
+  </div>
+
+  <div>
+    Residential Address: <span id="pvAddress"></span><br>
+    Phone Number: <span id="pvPhone"></span><br>
+    Email: <span id="pvEmail"></span>
+  </div>
+</div>
+
+<div class="mt">
+Application Purpose: <span id="pvPurpose"></span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-title">Financial Overview</div>
+
+
+<div class="grid-2 mt">
+
+<div>
+<b>Available Liquid Funds</b><br>
+Bank Balance: $<span id="pvBank"></span><br>
+Savings Balance: $<span id="pvSaving"></span><br>
+Cash on Hand: $<span id="pvCash"></span><br>
+Other Liquid Assets: $<span id="pvAssets"></span><br>
+Total Liquid Funds: $<span id="pvTotalLiquid"></span><br><br>
+
+<b>Existing Liabilities</b><br>
+Loan/Debt: $<span id="pvLoanDebt"></span><br>
+Other Liabilities: $<span id="pvOtherLiabilities"></span><br>
+Total Liabilities: $<span id="pvTotalLiabilities"></span>
+</div>
+
+<div>
+<b>Proof of Income</b><br>
+Primary Income Source & Monthly Amount: <span id="pvPrimaryIncome"></span><br>
+Secondary Income Source & Monthly Amount: <span id="pvSecondaryIncome"></span><br>
+Other Income: <span id="pvOtherIncome"></span><br>
+Total Monthly Income: $<span id="pvTotalIncome"></span><br><br>
+
+<b>Investment Capacity</b><br>
+Initial Investment Capability: $<span id="pvInitialInvestment"></span><br>
+Estimated Monthly Operating Budget: $<span id="pvMonthlyBudget"></span><br>
+Expected Funding Sources: <span id="pvFundingSource"></span>
+</div>
+
+</div>
+</div>
+
+<div class="section">
+<b>Financial Background</b><br>
+Previous Business Experience: <span id="pvBusinessExp"></span><br>
+Financial Conduct (Past fraud, etc.): <span id="pvFinancialConduct"></span>
+</div>
+
+<div class="section grid-2 verification">
+
+<div>
+<b>Attorney Verification</b><br>
+I, <span id="pvAttorney2"></span>, verify that I have reviewed my client’s financial records and confirm that the information provided is accurate to the best of my knowledge.<br><br>
+Attorney Signature:<br>
+<img id="attorneySign" class="signature"><br>
+Date: <span id="pvAttorneyDate"></span>
+</div>
+
+<div>
+<b>Applicant Declaration</b><br>
+I, <span id="pvName2"></span>, declare that all information provided is truthful and complete.<br><br>
+Applicant Signature:<br>
+<img id="appSignPreview" class="signature"><br>
+Date: <span id="pvApplicantDate"></span>
+</div>
+
+</div>
+
+</div>
+
+    </div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
+
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/copy_restriction.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
