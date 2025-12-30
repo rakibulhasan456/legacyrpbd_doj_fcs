@@ -4,10 +4,10 @@ const users={
   name:"Attorney Name",
   signature:"assets/img/sign_placeholder.png"
  },
-    onizuka:{
-  password:"onizuka456",
-  name:"Ryuujin Onizuka",
-  signature:"assets/img/sign_ryuujin.png"
+    zeke:{
+  password:"962546Zeke",
+  name:"Zeke Sen",
+  signature:"assets/img/sign_zeke.png"
  }
 };
 
