@@ -18,6 +18,11 @@ const users={
   password:"notgaycaspian",
   name:"Caspian Drake",
   signature:"assets/img/sign_caspain_drake.png"
+ },
+    killermax:{
+  password:"Zxcvbnm@123",
+  name:"Johnny Paul",
+  signature:"assets/img/sign_johnny_paul.png"
  }
 };
 
