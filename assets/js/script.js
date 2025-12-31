@@ -4,10 +4,20 @@ const users={
   name:"Attorney Name",
   signature:"assets/img/sign_placeholder.png"
  },
+   tanmoy:{
+  password:"Tanmoy1887",
+  name:"Gil Colson",
+  signature:"assets/img/sign_gil_colson.png"
+ }, 
     zeke:{
   password:"962546Zeke",
   name:"Zeke Sen",
   signature:"assets/img/sign_zeke.png"
+ },
+    caspian_drake:{
+  password:"notgaycaspian",
+  name:"Caspian Drake",
+  signature:"assets/img/sign_caspain_drake.png"
  }
 };
 
