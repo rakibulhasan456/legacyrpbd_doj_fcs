@@ -14,6 +14,11 @@ const users={
   name:"Zeke Sen",
   signature:"assets/img/sign_zeke.png"
  },
+    atif:{
+  password:"blacklegit4040",
+  name:"Atif Ayan",
+  signature:"assets/img/sign_atif_ayan.png"
+ },
     caspian_drake:{
   password:"notgaycaspian",
   name:"Caspian Drake",
