@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>LegacyRPBD | FCS Generator</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/the%20artisan.css">
     <link rel="stylesheet" href="assets/css/copy_restriction.css">
     <link rel="stylesheet" href="assets/css/design.css">
 <link rel="icon" type="image/webp" href="assets/img/logo_png.png">
@@ -130,9 +131,20 @@
 <input id="attorneyDate" type="date">
     
     <h3>Applicant Declaration</h3>
-    
-    <label>Applicant Signature</label>
-<input id="appSignature" type="file" accept="image/*">
+<div class="sig-method-toggle">
+  <label><input type="radio" name="sigMethod" value="type" checked> Type</label>
+  <label><input type="radio" name="sigMethod" value="upload"> Upload</label>
+</div>
+
+<div id="typeSigArea">
+  <label>Type Full Name</label>
+  <input id="appTypeSignature" placeholder="Enter name for signature">
+</div>
+
+<div id="uploadSigArea" class="hidden">
+  <label>Upload Signature Image</label>
+  <input id="appSignature" type="file" accept="image/*">
+</div>
 
 <label>Applicant Declaration Date</label>
 <input id="appDate" type="date">
@@ -238,7 +250,7 @@ Financial Conduct (Past fraud, etc.): <span id="pvFinancialConduct"></span>
 <b>Attorney Verification</b><br>
 I, <span id="pvAttorney2"></span>, verify that I have reviewed my client’s financial records and confirm that the information provided is accurate to the best of my knowledge.<br><br>
 Attorney Signature:<br>
-<img id="attorneySign" class="signature"><br>
+<span id="pvAttorneySigText" class="sig-text"></span><br>
 Date: <span id="pvAttorneyDate"></span>
 </div>
 
@@ -246,7 +258,8 @@ Date: <span id="pvAttorneyDate"></span>
 <b>Applicant Declaration</b><br>
 I, <span id="pvName2"></span>, declare that all information provided is truthful and complete.<br><br>
 Applicant Signature:<br>
-<img id="appSignPreview" class="signature"><br>
+<span id="pvAppSigText" class="sig-text"></span>
+<img id="appSignPreview" class="signature hidden"><br>
 Date: <span id="pvApplicantDate"></span>
 </div>
 

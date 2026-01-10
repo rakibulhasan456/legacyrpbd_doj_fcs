@@ -201,3 +201,34 @@ button.ghost {
   opacity: 0.9;
 }
 
+/* Signature Text Style */
+
+/* Update the sig-text class to use it */
+
+.sig-text {
+  font-family: 'The Artisan', cursive;
+  font-size: 72px;
+  color: #1a1a1a;
+  display: block;
+  margin-top: 50px;
+  margin-bottom: -30px;
+  /*letter-spacing: -1px;*/
+  /*transform: rotate(-1deg);*/
+  font-weight: 700;
+}
+
+/* Toggle Styling */
+
+.sig-method-toggle {
+  margin-bottom: 12px;
+  display: flex;
+  gap: 10px;
+}
+
+.sig-method-toggle label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+

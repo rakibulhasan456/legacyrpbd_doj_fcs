@@ -1,0 +1,8 @@
+@font-face {
+	font-family: 'the artisan';
+	src: url(../../assets/fonts/the%20artisan-d613605e62afbbceaf5cf7d3d38e7926.woff2) format('woff2'),
+	url(../../assets/fonts/the%20artisan-073facc1168a28b9f14266a70f3073cc.woff) format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
