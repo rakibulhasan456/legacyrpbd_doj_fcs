@@ -4,7 +4,8 @@ const users = {
     zeke: { password: "962546Zeke", name: "Zeke Sen"},
     atif: { password: "blacklegit4040", name: "Atif Ayan"},
     caspian_drake: { password: "notgaycaspian", name: "Caspian Drake"},
-    killermax: { password: "Zxcvbnm@123", name: "Johnny Paul"}
+    killermax: { password: "Zxcvbnm@123", name: "Johnny Paul"},
+    roman: { password: "152515+9510", name: "Roman Sikder"}
 };
 
 // --- LOGIN LOGIC ---
