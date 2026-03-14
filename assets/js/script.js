@@ -8,7 +8,8 @@ const users = {
     roman: { password: "152515+9510", name: "Roman Sikder"},
     himura: { password: "Himura12", name: "Himura Nagi"},
     thenoobboytnb: { password: "Tnb6@#9TNB", name: "Luther Khan"},
-    marcoromano: { password: "123456", name: "Marco Romano"}
+    marcoromano: { password: "123456", name: "Marco Romano"},
+    tonyleo: { password: "1234", name: "Tony Leo"}
 };
 
 // --- LOGIN LOGIC ---
